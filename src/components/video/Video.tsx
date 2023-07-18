@@ -1,15 +1,15 @@
-import { useRef } from "react";
 import { videoContainer, video, dock } from "./Video.css";
 import { RangeSlider } from "../Rangeslider/Rangeslider";
 import { ThemeSwitch } from "../ThemeSwitch/ThemeSwitch";
 import { Controls } from "../Controls/Controls";
+import { useVideoStore } from "../../stateManager/store";
 
 type Props = {
   src: string;
 };
 
 export const Video = ({ src }: Props) => {
-  const videoRef = useRef(null);
+  const videoRef = useVideoStore((state) => state.videoRef);
 
   return (
     <div className={videoContainer}>
