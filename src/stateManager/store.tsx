@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createRef } from "react";
 import { create } from "zustand";
 
 type Theme = "light" | "dark";
@@ -29,7 +29,7 @@ interface VideoStore {
 }
 
 export const useVideoStore = create<VideoStore>((set) => ({
-  videoRef: React.createRef(),
+  videoRef: createRef(),
   isPlaying: false,
   setVideoRef: (ref) => set({ videoRef: ref }),
   togglePlay: () =>

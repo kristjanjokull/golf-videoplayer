@@ -1,4 +1,3 @@
-// import { useThemeStore } from "../../stateManager/store";
 import { PlayIcon } from "../icons/Play";
 import { PauseIcon } from "../icons/Pause";
 import { RewindIcon } from "../icons/Rewind";
