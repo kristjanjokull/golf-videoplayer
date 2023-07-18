@@ -6,26 +6,31 @@ import { ForwardIcon } from "../icons/Forward";
 import { controls, controlsButton } from "./Controls.css";
 
 export const Controls: React.FC = () => {
-  // const { theme, toggleTheme } = useThemeStore();
+  // TODO: Remove this variable when statemanager is ready
   const isPlaying = false;
-  const handleBack = () => console.log("todo");
-  const handlePlayPause = () => console.log("todo");
-  const handleForward = () => console.log("todo");
+
+  const togglePlay = () => {
+    // TODO: Play/Pause video
+  };
+
+  const rewind = () => {
+    // TODO: Rewind video of 0.07s from current time
+  };
+
+  const forward = () => {
+    // TODO: Rewind video of 0.07s from current time
+  };
 
   return (
     <div className={controls}>
-      <button type="button" className={controlsButton} onClick={handleBack}>
+      <button type="button" className={controlsButton} onClick={rewind}>
         <RewindIcon />
       </button>
-      <button
-        type="button"
-        className={controlsButton}
-        onClick={handlePlayPause}
-      >
+      <button type="button" className={controlsButton} onClick={togglePlay}>
         {!isPlaying && <PlayIcon />}
         {isPlaying && <PauseIcon />}
       </button>
-      <button type="button" className={controlsButton} onClick={handleForward}>
+      <button type="button" className={controlsButton} onClick={forward}>
         <ForwardIcon />
       </button>
     </div>

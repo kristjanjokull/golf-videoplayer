@@ -15,3 +15,7 @@ export const useThemeStore = create<ThemeStore>((set) => ({
     }));
   },
 }));
+
+// =============== Video store ====================
+
+// TODO: Implement Video store
