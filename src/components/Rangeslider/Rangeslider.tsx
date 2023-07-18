@@ -25,7 +25,6 @@ export const RangeSlider = () => {
 
   const handleChange = (v: number) => {
     setValue(v);
-
     if (videoRef.current) {
       const videoDuration = videoRef.current.duration;
       const newTime = (v / 100) * videoDuration;
