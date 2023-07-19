@@ -2,18 +2,19 @@ import { style } from "@vanilla-extract/css";
 import { vars } from "../../theme/theme.css";
 
 export const videoContainer = style({
-  position: "relative",
+  position: "absolute",
   width: "100%",
-  maxWidth: "1000px",
-  maxHeight: "600px",
+  height: "100%",
   display: "flex",
   justifyContent: "center",
   marginInline: "auto",
   backgroundColor: vars.colors.backgroundColor,
+  overflow: "hidden",
 });
 
 export const video = style({
-  width: "100%",
+  minWidth: "100%",
+  minHeight: "100%",
 });
 
 export const dock = style({
