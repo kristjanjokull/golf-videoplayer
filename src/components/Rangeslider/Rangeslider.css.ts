@@ -1,10 +1,16 @@
 import { style, globalStyle } from "@vanilla-extract/css";
+import { breakpoints } from "../../utils/breakpoints";
 
 export const horizontalSlider = style({
   width: "100%",
   height: 40,
   maxWidth: 500,
   margin: "auto",
+  "@media": {
+    [`${breakpoints.phablet}, ${breakpoints.phone}`]: {
+      maxWidth: 400,
+    },
+  },
 });
 
 export const thumb = style({

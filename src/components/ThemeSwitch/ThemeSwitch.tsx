@@ -1,7 +1,6 @@
 import { MoonIcon } from "../icons/Moon";
 import { SunIcon } from "../icons/Sun";
 import { themeButton } from "./ThemeSwitch.css";
-// import { lightTheme, darkTheme } from "../../theme/theme.css";
 import { useThemeStore } from "../../stateManager/store";
 
 export const ThemeSwitch: React.FC = () => {
