@@ -3,6 +3,10 @@ import { RangeSlider } from "../Rangeslider/Rangeslider";
 import { ThemeSwitch } from "../ThemeSwitch/ThemeSwitch";
 import { Controls } from "../Controls/Controls";
 import { useVideoStore } from "../../stateManager/store";
+import Sidebar from "../Sidebar/Sidebar";
+import { SoundToggler } from "../SoundToggler/SoundToggler";
+import { VideoFlip } from "../VideoFlip/VideoFlip";
+import { FullScreen } from "../Fullscreen/Fullscreen";
 
 type Props = {
   src: string;
@@ -13,7 +17,9 @@ export const Video = ({ src }: Props) => {
 
   return (
     <div className={videoContainer}>
-      <ThemeSwitch />
+      <Sidebar
+        components={[ThemeSwitch, SoundToggler, VideoFlip, FullScreen]}
+      />
       <div className={dock}>
         <RangeSlider />
         <Controls />
