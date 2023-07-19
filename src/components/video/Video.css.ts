@@ -27,6 +27,7 @@ export const dock = style({
   // opacity: 0,
   transition: "opacity 150ms ease-in-out",
   background: "rgba(117, 117, 117, 0.5)",
+  padding: "1rem 0",
 });
 
 // TODO: Delete
