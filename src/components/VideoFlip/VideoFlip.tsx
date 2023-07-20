@@ -1,9 +1,9 @@
-import { FlipIcon } from "../icons/Flip";
+import { FlipRightIcon } from "../icons/FlipRight";
 
 export const VideoFlip: React.FC = () => {
   return (
     <button>
-      <FlipIcon />
+      <FlipRightIcon />
     </button>
   );
 };
