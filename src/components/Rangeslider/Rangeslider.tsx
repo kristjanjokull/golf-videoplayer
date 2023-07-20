@@ -1,22 +1,16 @@
 import ReactSlider, { ReactSliderProps } from "react-slider";
-import { horizontalSlider, track, thumb, activeTrack } from "./Rangeslider.css";
+import {
+  horizontalSlider,
+  track,
+  trackWithTransition,
+  thumb,
+  thumbWithTransition,
+  activeTrack,
+} from "./Rangeslider.css";
 import { useVideoStore } from "../../stateManager/store";
 
 type RenderThumb = ReactSliderProps<number>["renderThumb"];
 type RenderTrack = ReactSliderProps<number>["renderTrack"];
-
-const Track: RenderTrack = (props, state) => {
-  const indx = state.index;
-  return <div {...props} className={indx === 1 ? track : activeTrack}></div>;
-};
-
-const Thumb: RenderThumb = (props, state) => {
-  return (
-    <div {...props} className={thumb}>
-      {state.valueNow}
-    </div>
-  );
-};
 
 export const RangeSlider = () => {
   const { videoRef, isPlaying, currentTime, videoDuration } = useVideoStore(
@@ -27,6 +21,23 @@ export const RangeSlider = () => {
       videoDuration: state.videoDuration,
     }),
   );
+
+  const Track: RenderTrack = (props, state) => {
+    const indx = state.index;
+    const trackCSS = isPlaying ? trackWithTransition : track;
+    return (
+      <div {...props} className={indx === 1 ? trackCSS : activeTrack}></div>
+    );
+  };
+
+  const Thumb: RenderThumb = (props, state) => {
+    const thumbCSS = isPlaying ? thumbWithTransition : thumb;
+    return (
+      <div {...props} className={thumbCSS}>
+        {state.valueNow}
+      </div>
+    );
+  };
 
   const value = videoDuration > 0 ? (currentTime / videoDuration) * 100 : 0;
 

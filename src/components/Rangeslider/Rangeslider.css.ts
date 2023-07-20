@@ -1,4 +1,4 @@
-import { style, globalStyle } from "@vanilla-extract/css";
+import { style, globalStyle, ComplexStyleRule } from "@vanilla-extract/css";
 import { breakpoints } from "../../utils/breakpoints";
 
 export const horizontalSlider = style({
@@ -14,7 +14,7 @@ export const horizontalSlider = style({
   },
 });
 
-export const thumb = style({
+const thumbBase: ComplexStyleRule = {
   cursor: "pointer",
   position: "absolute",
   zIndex: 100,
@@ -28,19 +28,31 @@ export const thumb = style({
   height: 10,
   outline: "none",
   lineHeight: 38,
-  transition: "left 0.5s ease-out",
+};
+
+export const thumb = style(thumbBase);
+
+export const thumbWithTransition = style({
+  ...thumbBase,
+  transition: "left 0.8s ease-out",
 });
 
 globalStyle(`${thumb} .active`, {
   backgroundColor: "grey",
 });
 
-export const track = style({
+const trackBase: ComplexStyleRule = {
   position: "relative",
   background: "#d7d5d5",
   top: 20,
   height: 4,
-  transition: "width 0.5s ease-out",
+};
+
+export const track = style(trackBase);
+
+export const trackWithTransition = style({
+  ...trackBase,
+  transition: "width 0.8s ease-out",
 });
 
 export const activeTrack = style({
