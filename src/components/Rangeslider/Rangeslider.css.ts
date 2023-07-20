@@ -27,6 +27,7 @@ export const thumb = style({
   height: 10,
   outline: "none",
   lineHeight: 38,
+  transition: "left 0.5s ease-out", // Add this line
 });
 
 globalStyle(`${thumb} .active`, {
@@ -38,6 +39,7 @@ export const track = style({
   background: "#d7d5d5",
   top: 20,
   height: 4,
+  transition: "width 0.5s ease-out", // And this line
 });
 
 export const activeTrack = style({
