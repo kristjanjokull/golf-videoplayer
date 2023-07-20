@@ -1,4 +1,3 @@
-import { useState } from "react";
 import ReactSlider, { ReactSliderProps } from "react-slider";
 import { horizontalSlider, track, thumb, activeTrack } from "./Rangeslider.css";
 import { useVideoStore } from "../../stateManager/store";
@@ -20,13 +19,16 @@ const Thumb: RenderThumb = (props, state) => {
 };
 
 export const RangeSlider = () => {
-  const videoRef = useVideoStore((state) => state.videoRef);
-  const [value, setValue] = useState(0);
+  const { videoRef, currentTime, videoDuration } = useVideoStore((state) => ({
+    videoRef: state.videoRef,
+    currentTime: state.currentTime,
+    videoDuration: state.videoDuration,
+  }));
+
+  const value = videoDuration > 0 ? (currentTime / videoDuration) * 100 : 0;
 
   const handleChange = (v: number) => {
-    setValue(v);
     if (videoRef.current) {
-      const videoDuration = videoRef.current.duration;
       const newTime = (v / 100) * videoDuration;
       videoRef.current.currentTime = newTime;
     }

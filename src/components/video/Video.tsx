@@ -13,7 +13,14 @@ type Props = {
 };
 
 export const Video = ({ src }: Props) => {
-  const videoRef = useVideoStore((state) => state.videoRef);
+  // const videoRef = useVideoStore((state) => state.videoRef);
+  const { videoRef, setVideoDuration, setCurrentTime } = useVideoStore(
+    (state) => ({
+      videoRef: state.videoRef,
+      setVideoDuration: state.setVideoDuration,
+      setCurrentTime: state.setCurrentTime,
+    }),
+  );
 
   return (
     <div className={videoContainer}>
@@ -24,7 +31,16 @@ export const Video = ({ src }: Props) => {
         <RangeSlider />
         <Controls />
       </div>
-      <video ref={videoRef} className={video}>
+      <video
+        ref={videoRef}
+        className={video}
+        onTimeUpdate={() =>
+          videoRef.current && setCurrentTime(videoRef.current.currentTime)
+        }
+        onLoadedMetadata={() =>
+          videoRef.current && setVideoDuration(videoRef.current.duration)
+        }
+      >
         <source src={src} type="video/webm" />
         <source src={src} type="video/mp4" />
         <p>
