@@ -19,11 +19,14 @@ const Thumb: RenderThumb = (props, state) => {
 };
 
 export const RangeSlider = () => {
-  const { videoRef, currentTime, videoDuration } = useVideoStore((state) => ({
-    videoRef: state.videoRef,
-    currentTime: state.currentTime,
-    videoDuration: state.videoDuration,
-  }));
+  const { videoRef, isPlaying, currentTime, videoDuration } = useVideoStore(
+    (state) => ({
+      videoRef: state.videoRef,
+      isPlaying: state.isPlaying,
+      currentTime: state.currentTime,
+      videoDuration: state.videoDuration,
+    }),
+  );
 
   const value = videoDuration > 0 ? (currentTime / videoDuration) * 100 : 0;
 
@@ -36,6 +39,7 @@ export const RangeSlider = () => {
 
   return (
     <ReactSlider
+      disabled={isPlaying}
       className={horizontalSlider}
       value={value}
       onChange={handleChange}

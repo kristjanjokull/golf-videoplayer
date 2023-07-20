@@ -6,6 +6,7 @@ export const horizontalSlider = style({
   height: 40,
   maxWidth: 500,
   margin: "auto",
+  cursor: "pointer",
   "@media": {
     [`${breakpoints.phablet}, ${breakpoints.phone}`]: {
       maxWidth: 400,
@@ -27,7 +28,7 @@ export const thumb = style({
   height: 10,
   outline: "none",
   lineHeight: 38,
-  transition: "left 0.5s ease-out", // Add this line
+  transition: "left 0.5s ease-out",
 });
 
 globalStyle(`${thumb} .active`, {
@@ -39,7 +40,8 @@ export const track = style({
   background: "#d7d5d5",
   top: 20,
   height: 4,
-  transition: "width 0.5s ease-out", // And this line
+  transition: "width 0.5s ease-out",
+  cursor: "pointer",
 });
 
 export const activeTrack = style({
@@ -47,8 +49,25 @@ export const activeTrack = style({
   background: "#ecc90a",
   top: 20,
   height: 4,
+  cursor: "pointer",
 });
 
 globalStyle(`${track}.example-track-0`, {
   background: "#83a9ff",
+});
+
+globalStyle(`${horizontalSlider}.disabled`, {
+  cursor: "not-allowed",
+});
+
+globalStyle(`${horizontalSlider}.disabled ${track}`, {
+  cursor: "not-allowed",
+});
+
+globalStyle(`${horizontalSlider}.disabled ${thumb}`, {
+  cursor: "not-allowed",
+});
+
+globalStyle(`${horizontalSlider}.disabled ${activeTrack}`, {
+  cursor: "not-allowed",
 });
