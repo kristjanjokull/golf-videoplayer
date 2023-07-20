@@ -41,7 +41,6 @@ export const track = style({
   top: 20,
   height: 4,
   transition: "width 0.5s ease-out",
-  cursor: "pointer",
 });
 
 export const activeTrack = style({
@@ -49,7 +48,6 @@ export const activeTrack = style({
   background: "#ecc90a",
   top: 20,
   height: 4,
-  cursor: "pointer",
 });
 
 globalStyle(`${track}.example-track-0`, {
@@ -57,17 +55,5 @@ globalStyle(`${track}.example-track-0`, {
 });
 
 globalStyle(`${horizontalSlider}.disabled`, {
-  cursor: "not-allowed",
-});
-
-globalStyle(`${horizontalSlider}.disabled ${track}`, {
-  cursor: "not-allowed",
-});
-
-globalStyle(`${horizontalSlider}.disabled ${thumb}`, {
-  cursor: "not-allowed",
-});
-
-globalStyle(`${horizontalSlider}.disabled ${activeTrack}`, {
   cursor: "not-allowed",
 });
