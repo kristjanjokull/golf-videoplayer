@@ -17,17 +17,20 @@ export const FullScreen: React.FC = () => {
   }, []);
 
   const goFullScreen = () => {
-    if (document.documentElement.requestFullscreen) {
-      void document.documentElement.requestFullscreen();
-    } else if (document.documentElement.mozRequestFullScreen) {
-      // Firefox
-      document.documentElement.mozRequestFullScreen();
-    } else if (document.documentElement.webkitRequestFullscreen) {
-      // Chrome, Safari and Opera
-      document.documentElement.webkitRequestFullscreen();
-    } else if (document.documentElement.msRequestFullscreen) {
-      // IE/Edge
-      document.documentElement.msRequestFullscreen();
+    const fsElement = document.documentElement as HTMLElement & {
+      mozRequestFullScreen?: () => Promise<void>;
+      msRequestFullscreen?: () => Promise<void>;
+      webkitRequestFullscreen?: () => Promise<void>;
+    };
+
+    if (fsElement.requestFullscreen) {
+      void fsElement.requestFullscreen();
+    } else if (fsElement.mozRequestFullScreen) {
+      void fsElement.mozRequestFullScreen();
+    } else if (fsElement.webkitRequestFullscreen) {
+      void fsElement.webkitRequestFullscreen();
+    } else if (fsElement.msRequestFullscreen) {
+      void fsElement.msRequestFullscreen();
     }
   };
 
