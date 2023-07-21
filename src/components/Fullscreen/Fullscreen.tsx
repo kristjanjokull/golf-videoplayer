@@ -1,9 +1,10 @@
+import { Button } from "../Button/Button";
 import { FullscreenIcon } from "../icons/Fullscreen";
 
 export const FullScreen: React.FC = () => {
   return (
-    <button>
+    <Button onClick={() => console.log("huga huga")}>
       <FullscreenIcon />
-    </button>
+    </Button>
   );
 };

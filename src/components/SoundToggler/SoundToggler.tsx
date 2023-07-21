@@ -1,9 +1,10 @@
+import { Button } from "../Button/Button";
 import { MuteIcon } from "../icons/Mute";
 
 export const SoundToggler: React.FC = () => {
   return (
-    <button>
+    <Button onClick={() => console.log("huga huga")}>
       <MuteIcon />
-    </button>
+    </Button>
   );
 };
