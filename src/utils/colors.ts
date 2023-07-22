@@ -7,7 +7,7 @@ type Colors = {
 };
 
 export const lightThemeColors: Colors = {
-  background: "rgb(233, 236, 239)",
+  background: "white", // rgb(233, 236, 239)
   buttons: {
     idle: "#ece2e2",
     hover: "#dbdcdf",
@@ -25,7 +25,7 @@ export const lightThemeColors: Colors = {
 };
 
 export const darkThemeColors: Colors = {
-  background: "#ece2e2",
+  background: "black",
   buttons: {
     idle: "#ece2e2",
     hover: "#dbdcdf",
