@@ -1,4 +1,4 @@
-import { videoContainer, video, dock } from "./Video.css";
+import { videoContainer, video, videoFlipped, dock } from "./Video.css";
 import { RangeSlider } from "../Rangeslider/Rangeslider";
 import { ThemeSwitch } from "../ThemeSwitch/ThemeSwitch";
 import { Controls } from "../Controls/Controls";
@@ -14,14 +14,14 @@ type Props = {
 
 export const Video = ({ src }: Props) => {
   // const videoRef = useVideoStore((state) => state.videoRef);
-  const { videoRef, isMuted, setVideoDuration, setCurrentTime } = useVideoStore(
-    (state) => ({
+  const { videoRef, isMuted, isFlipped, setVideoDuration, setCurrentTime } =
+    useVideoStore((state) => ({
       videoRef: state.videoRef,
       isMuted: state.isMuted,
+      isFlipped: state.isFlipped,
       setVideoDuration: state.setVideoDuration,
       setCurrentTime: state.setCurrentTime,
-    }),
-  );
+    }));
 
   return (
     <div className={videoContainer}>
@@ -34,7 +34,7 @@ export const Video = ({ src }: Props) => {
       </div>
       <video
         ref={videoRef}
-        className={video}
+        className={!isFlipped ? video : videoFlipped}
         muted={isMuted}
         onTimeUpdate={() =>
           videoRef.current && setCurrentTime(videoRef.current.currentTime)

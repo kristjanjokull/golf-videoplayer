@@ -1,4 +1,4 @@
-import { style } from "@vanilla-extract/css";
+import { style, ComplexStyleRule } from "@vanilla-extract/css";
 import { vars } from "../../utils/theme.css";
 
 export const videoContainer = style({
@@ -12,9 +12,16 @@ export const videoContainer = style({
   overflow: "hidden",
 });
 
-export const video = style({
+const videoBase: ComplexStyleRule = {
   minWidth: "100%",
   minHeight: "100%",
+};
+
+export const video = style(videoBase);
+
+export const videoFlipped = style({
+  ...videoBase,
+  transform: "rotateY(180deg)",
 });
 
 export const dock = style({

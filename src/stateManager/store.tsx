@@ -23,9 +23,11 @@ interface VideoStore {
   videoRef: React.RefObject<HTMLVideoElement>;
   isPlaying: boolean;
   isMuted: boolean;
+  isFlipped: boolean;
   videoDuration: number;
   currentTime: number;
   toggleMute: () => void;
+  toggleFlipped: () => void;
   setVideoRef: (ref: React.RefObject<HTMLVideoElement>) => void;
   setVideoDuration: (duration: number) => void;
   setCurrentTime: (time: number) => void;
@@ -38,6 +40,7 @@ export const useVideoStore = create<VideoStore>((set) => ({
   videoRef: createRef(),
   isPlaying: false,
   isMuted: true,
+  isFlipped: false,
   videoDuration: 0,
   currentTime: 0,
   toggleMute: () =>
@@ -47,6 +50,10 @@ export const useVideoStore = create<VideoStore>((set) => ({
       }
 
       return { isMuted: !state.isMuted };
+    }),
+  toggleFlipped: () =>
+    set((state) => {
+      return { isFlipped: !state.isFlipped };
     }),
   setVideoRef: (ref) => set({ videoRef: ref }),
   setVideoDuration: (duration: number) => set({ videoDuration: duration }),
