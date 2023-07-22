@@ -14,9 +14,10 @@ type Props = {
 
 export const Video = ({ src }: Props) => {
   // const videoRef = useVideoStore((state) => state.videoRef);
-  const { videoRef, setVideoDuration, setCurrentTime } = useVideoStore(
+  const { videoRef, isMuted, setVideoDuration, setCurrentTime } = useVideoStore(
     (state) => ({
       videoRef: state.videoRef,
+      isMuted: state.isMuted,
       setVideoDuration: state.setVideoDuration,
       setCurrentTime: state.setCurrentTime,
     }),
@@ -34,6 +35,7 @@ export const Video = ({ src }: Props) => {
       <video
         ref={videoRef}
         className={video}
+        muted={isMuted}
         onTimeUpdate={() =>
           videoRef.current && setCurrentTime(videoRef.current.currentTime)
         }

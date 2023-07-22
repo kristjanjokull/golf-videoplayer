@@ -22,8 +22,10 @@ export const useThemeStore = create<ThemeStore>((set) => ({
 interface VideoStore {
   videoRef: React.RefObject<HTMLVideoElement>;
   isPlaying: boolean;
+  isMuted: boolean;
   videoDuration: number;
   currentTime: number;
+  toggleMute: () => void;
   setVideoRef: (ref: React.RefObject<HTMLVideoElement>) => void;
   setVideoDuration: (duration: number) => void;
   setCurrentTime: (time: number) => void;
@@ -35,8 +37,17 @@ interface VideoStore {
 export const useVideoStore = create<VideoStore>((set) => ({
   videoRef: createRef(),
   isPlaying: false,
+  isMuted: true,
   videoDuration: 0,
   currentTime: 0,
+  toggleMute: () =>
+    set((state) => {
+      if (state.videoRef.current) {
+        state.videoRef.current.muted = !state.videoRef.current.muted;
+      }
+
+      return { isMuted: !state.isMuted };
+    }),
   setVideoRef: (ref) => set({ videoRef: ref }),
   setVideoDuration: (duration: number) => set({ videoDuration: duration }),
   setCurrentTime: (time: number) => set({ currentTime: time }),
