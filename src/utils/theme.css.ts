@@ -3,6 +3,7 @@ import {
   createThemeContract,
   createGlobalTheme,
 } from "@vanilla-extract/css";
+import { lightThemeColors, darkThemeColors } from "./colors";
 
 const root = createGlobalTheme("#root", {});
 
@@ -19,26 +20,26 @@ const colors = createThemeContract({
 });
 
 export const lightTheme = createTheme(colors, {
-  backgroundColor: "rgb(233, 236, 239)",
+  backgroundColor: lightThemeColors.background,
   controls: {
-    container: "rgba(117, 117, 117, 0.5)",
-    button: "#d7d5d5",
-    buttonActive: "#fff",
-    slider: "#d7d5d5",
-    sliderActive: "#ecc90a",
-    thumb: "#ecc90a",
+    container: lightThemeColors.dock,
+    button: lightThemeColors.buttons.idle,
+    buttonActive: lightThemeColors.buttons.hover,
+    slider: lightThemeColors.slider.trackUnPlayed,
+    sliderActive: lightThemeColors.slider.trackPlayed,
+    thumb: lightThemeColors.slider.knob,
   },
 });
 
 export const darkTheme = createTheme(colors, {
-  backgroundColor: "red",
+  backgroundColor: darkThemeColors.background,
   controls: {
-    container: "rgba(117, 117, 117, 0.5)",
-    button: "#d7d5d5",
-    buttonActive: "#fff",
-    slider: "#d7d5d5",
-    sliderActive: "#ecc90a",
-    thumb: "#ecc90a",
+    container: darkThemeColors.dock,
+    button: darkThemeColors.buttons.idle,
+    buttonActive: darkThemeColors.buttons.hover,
+    slider: darkThemeColors.slider.trackUnPlayed,
+    sliderActive: darkThemeColors.slider.trackPlayed,
+    thumb: darkThemeColors.slider.knob,
   },
 });
 
