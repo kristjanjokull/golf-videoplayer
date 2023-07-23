@@ -36,6 +36,8 @@ export const FullScreen: React.FC = () => {
 
   return (
     <Button
+      type="sidebar"
+      title={!isFullscreen ? "Go fullscreen" : "Exit fullscreen"}
       onClick={() => {
         if (!isFullscreen) {
           setIsFullscreen(true);

@@ -1,15 +1,21 @@
 import { FC } from "react";
-import { button } from "./Button.css";
+import { sidebarButton, controlButton } from "./Button.css";
 
 type ButtonProps = {
+  type: "control" | "sidebar";
   onClick: () => void;
   title: string;
   children: React.ReactNode;
 };
 
-export const Button: FC<ButtonProps> = ({ onClick, title, children }) => {
+export const Button: FC<ButtonProps> = ({ type, onClick, title, children }) => {
   return (
-    <button className={button} onClick={onClick} title={title}>
+    <button
+      type="button"
+      className={type === "sidebar" ? sidebarButton : controlButton}
+      onClick={onClick}
+      title={title}
+    >
       {children}
     </button>
   );

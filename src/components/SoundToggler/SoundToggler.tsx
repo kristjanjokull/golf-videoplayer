@@ -10,6 +10,7 @@ export const SoundToggler: React.FC = () => {
   }));
   return (
     <Button
+      type="sidebar"
       onClick={toggleMute}
       title={isMuted ? "Turn sound on" : "Turn sound off"}
     >

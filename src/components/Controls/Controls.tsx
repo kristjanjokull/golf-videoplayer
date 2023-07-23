@@ -2,8 +2,9 @@ import { PlayIcon } from "../icons/Play";
 import { PauseIcon } from "../icons/Pause";
 import { RewindIcon } from "../icons/Rewind";
 import { ForwardIcon } from "../icons/Forward";
-import { controls, controlsButton } from "./Controls.css";
+import { controls } from "./Controls.css";
 import { useVideoStore } from "../../stateManager/store";
+import { Button } from "../Button/Button";
 
 export const Controls: React.FC = () => {
   const { rewind, forward, togglePlay, isPlaying } = useVideoStore((state) => ({
@@ -15,16 +16,20 @@ export const Controls: React.FC = () => {
 
   return (
     <div className={controls}>
-      <button type="button" className={controlsButton} onClick={rewind}>
+      <Button type="control" title="Rewind" onClick={rewind}>
         <RewindIcon />
-      </button>
-      <button type="button" className={controlsButton} onClick={togglePlay}>
+      </Button>
+      <Button
+        type="control"
+        title={!isPlaying ? "Play" : "Pause"}
+        onClick={togglePlay}
+      >
         {!isPlaying && <PlayIcon />}
         {isPlaying && <PauseIcon />}
-      </button>
-      <button type="button" className={controlsButton} onClick={forward}>
+      </Button>
+      <Button type="control" title="Forward" onClick={forward}>
         <ForwardIcon />
-      </button>
+      </Button>
     </div>
   );
 };

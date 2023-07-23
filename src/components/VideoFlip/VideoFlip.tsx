@@ -10,6 +10,7 @@ export const VideoFlip: React.FC = () => {
   }));
   return (
     <Button
+      type="sidebar"
       title={!isFlipped ? "Flip video" : "Unflip video"}
       onClick={toggleFlipped}
     >
