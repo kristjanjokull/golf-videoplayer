@@ -3,6 +3,13 @@ import { Button } from "@components/button/button";
 import { FullscreenIcon } from "@components/icons/fullscreen";
 import { FullscreenExitIcon } from "@components/icons/fullScreenExit";
 
+interface FullScreenDocument extends Document {
+  msExitFullscreen?: () => Promise<void>;
+  webkitExitFullscreen?: () => Promise<void>;
+  mozCancelFullScreen?: () => Promise<void>;
+  exitFullscreen: () => Promise<void>;
+}
+
 export const FullScreen: React.FC = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
 
@@ -35,6 +42,22 @@ export const FullScreen: React.FC = () => {
     }
   };
 
+  const exitFullScreen = () => {
+    const fsDoc = document as FullScreenDocument;
+    if (fsDoc.exitFullscreen) {
+      void fsDoc.exitFullscreen();
+    } else if (fsDoc.mozCancelFullScreen) {
+      /* Firefox */
+      void fsDoc.mozCancelFullScreen();
+    } else if (fsDoc.webkitExitFullscreen) {
+      /* Chrome, Safari and Opera */
+      void fsDoc.webkitExitFullscreen();
+    } else if (fsDoc.msExitFullscreen) {
+      /* IE/Edge */
+      void fsDoc.msExitFullscreen();
+    }
+  };
+
   return (
     <Button
       type="sidebar"
@@ -43,6 +66,9 @@ export const FullScreen: React.FC = () => {
         if (!isFullscreen) {
           setIsFullscreen(true);
           goFullScreen();
+        } else {
+          setIsFullscreen(false);
+          exitFullScreen();
         }
       }}
     >
