@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { Button } from "../Button/Button";
-import { FullscreenIcon } from "../icons/Fullscreen";
-import { FullscreenExitIcon } from "../icons/FullScreenExit";
+import { Button } from "../button/button";
+import { FullscreenIcon } from "../icons/fullscreen";
+import { FullscreenExitIcon } from "../icons/fullScreenExit";
 
 export const FullScreen: React.FC = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);

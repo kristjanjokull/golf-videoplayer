@@ -1,12 +1,12 @@
-import { videoContainer, video, videoFlipped, dock } from "./Video.css";
-import { RangeSlider } from "../Rangeslider/Rangeslider";
-import { ThemeSwitch } from "../ThemeSwitch/ThemeSwitch";
-import { Controls } from "../Controls/Controls";
+import { videoContainer, video, videoFlipped, dock } from "./video.css";
+import { RangeSlider } from "../rangeslider/rangeslider";
+import { ThemeSwitch } from "../themeSwitch/themeSwitch";
+import { Controls } from "../controls/controls";
 import { useVideoStore } from "../../stateManager/store";
-import Sidebar from "../Sidebar/Sidebar";
-import { SoundToggler } from "../SoundToggler/SoundToggler";
-import { VideoFlip } from "../VideoFlip/VideoFlip";
-import { FullScreen } from "../Fullscreen/Fullscreen";
+import Sidebar from "../sidebar/sidebar";
+import { SoundToggler } from "../soundToggler/soundToggler";
+import { VideoFlip } from "../videoFlip/videoFlip";
+import { FullScreen } from "../fullscreen/fullscreen";
 
 type Props = {
   src: string;

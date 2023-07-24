@@ -1,10 +1,10 @@
-import { PlayIcon } from "../icons/Play";
-import { PauseIcon } from "../icons/Pause";
-import { RewindIcon } from "../icons/Rewind";
-import { ForwardIcon } from "../icons/Forward";
-import { controls } from "./Controls.css";
+import { PlayIcon } from "../icons/play";
+import { PauseIcon } from "../icons/pause";
+import { RewindIcon } from "../icons/rewind";
+import { ForwardIcon } from "../icons/forward";
+import { controls } from "./controls.css";
 import { useVideoStore } from "../../stateManager/store";
-import { Button } from "../Button/Button";
+import { Button } from "../button/button";
 
 export const Controls: React.FC = () => {
   const { rewind, forward, togglePlay, isPlaying } = useVideoStore((state) => ({

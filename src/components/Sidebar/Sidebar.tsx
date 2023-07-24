@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import { sidebar } from "./Sidebar.css";
+import { sidebar } from "./sidebar.css";
 
 interface SidebarProps {
   components: FunctionComponent[];

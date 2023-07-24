@@ -6,7 +6,7 @@ import {
   thumb,
   thumbWithTransition,
   activeTrack,
-} from "./Rangeslider.css";
+} from "./rangeslider.css";
 import { useVideoStore } from "../../stateManager/store";
 
 type RenderThumb = ReactSliderProps<number>["renderThumb"];
