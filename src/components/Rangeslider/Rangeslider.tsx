@@ -1,4 +1,5 @@
 import ReactSlider, { ReactSliderProps } from "react-slider";
+import { useVideoStore } from "@stateManager/store";
 import {
   horizontalSlider,
   track,
@@ -7,7 +8,6 @@ import {
   thumbWithTransition,
   activeTrack,
 } from "./rangeslider.css";
-import { useVideoStore } from "../../stateManager/store";
 
 type RenderThumb = ReactSliderProps<number>["renderThumb"];
 type RenderTrack = ReactSliderProps<number>["renderTrack"];

@@ -1,11 +1,11 @@
 import { RangeSlider } from "@components/rangeslider/Rangeslider";
 import { ThemeSwitch } from "@components/themeSwitch/themeSwitch";
 import { Controls } from "@components/controls/controls";
-import { useVideoStore } from "@stateManager/store";
 import Sidebar from "@components/sidebar/sidebar";
 import { SoundToggler } from "@components/soundToggler/soundToggler";
 import { VideoFlip } from "@components/videoFlip/videoFlip";
 import { FullScreen } from "@components/fullscreen/fullscreen";
+import { useVideoStore } from "@stateManager/store";
 import { videoContainer, video, videoFlipped, dock } from "./video.css";
 
 type Props = {
