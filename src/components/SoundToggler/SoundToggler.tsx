@@ -1,7 +1,7 @@
 import { Button } from "$components/button/button";
 import { MuteIcon } from "$components/icons/mute";
 import { SoundOnIcon } from "$components/icons/soundOn";
-import { useVideoStore } from "$stateManager/store";
+import { useVideoStore } from "$utils/state";
 
 export const SoundToggler: React.FC = () => {
   const { isMuted, toggleMute } = useVideoStore((state) => ({

@@ -1,6 +1,6 @@
 import video from "./assets/demoswing.mp4";
 import { Video } from "./components/video/video";
-import { useThemeStore } from "./stateManager/store";
+import { useThemeStore } from "./utils/state";
 import { darkTheme, lightTheme } from "./utils/theme.css";
 
 function App() {

@@ -1,6 +1,8 @@
 import React, { createRef } from "react";
 import { create } from "zustand";
 
+// =============== Theme store ====================
+
 type Theme = "light" | "dark";
 
 interface ThemeStore {

@@ -3,7 +3,7 @@ import { ForwardIcon } from "$components/icons/forward";
 import { PauseIcon } from "$components/icons/pause";
 import { PlayIcon } from "$components/icons/play";
 import { RewindIcon } from "$components/icons/rewind";
-import { useVideoStore } from "$stateManager/store";
+import { useVideoStore } from "$utils/state";
 
 import { controls } from "./controls.css";
 

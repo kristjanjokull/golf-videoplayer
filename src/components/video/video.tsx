@@ -5,7 +5,7 @@ import Sidebar from "$components/sidebar/sidebar";
 import { SoundToggler } from "$components/soundToggler/soundToggler";
 import { ThemeSwitch } from "$components/themeSwitch/themeSwitch";
 import { VideoFlip } from "$components/videoFlip/videoFlip";
-import { useVideoStore } from "$stateManager/store";
+import { useVideoStore } from "$utils/state";
 
 import { dock, video, videoContainer, videoFlipped } from "./video.css";
 
