@@ -1,5 +1,6 @@
-import { breakpoints } from "@utils/breakpoints";
 import { ComplexStyleRule, globalStyle, style } from "@vanilla-extract/css";
+
+import { breakpoints } from "$utils/breakpoints";
 
 export const horizontalSlider = style({
   width: "100%",

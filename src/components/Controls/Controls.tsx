@@ -1,9 +1,9 @@
-import { Button } from "@components/button/button";
-import { ForwardIcon } from "@components/icons/forward";
-import { PauseIcon } from "@components/icons/pause";
-import { PlayIcon } from "@components/icons/play";
-import { RewindIcon } from "@components/icons/rewind";
-import { useVideoStore } from "@stateManager/store";
+import { Button } from "$components/button/button";
+import { ForwardIcon } from "$components/icons/forward";
+import { PauseIcon } from "$components/icons/pause";
+import { PlayIcon } from "$components/icons/play";
+import { RewindIcon } from "$components/icons/rewind";
+import { useVideoStore } from "$stateManager/store";
 
 import { controls } from "./controls.css";
 

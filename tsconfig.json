@@ -21,9 +21,9 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": "src",
     "paths": {
-      "@components/*": ["components/*"],
-      "@stateManager/*": ["stateManager/*"],
-      "@utils/*": ["utils/*"]
+      "$components/*": ["components/*"],
+      "$stateManager/*": ["stateManager/*"],
+      "$utils/*": ["utils/*"]
     }
   },
   "include": ["src"],

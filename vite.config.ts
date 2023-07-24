@@ -9,9 +9,9 @@ import path from "path";
 export default defineConfig({
   resolve: {
     alias: {
-      "@components": path.resolve(__dirname, "./src/components"),
-      "@stateManager": path.resolve(__dirname, "./src/stateManager"),
-      "@utils": path.resolve(__dirname, "./src/utils"),
+      $components: path.resolve(__dirname, "./src/components"),
+      $stateManager: path.resolve(__dirname, "./src/stateManager"),
+      $utils: path.resolve(__dirname, "./src/utils"),
     },
   },
   plugins: [react(), vanillaExtractPlugin()],

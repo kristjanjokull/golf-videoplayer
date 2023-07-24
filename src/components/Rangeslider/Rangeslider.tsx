@@ -1,5 +1,6 @@
-import { useVideoStore } from "@stateManager/store";
 import ReactSlider, { ReactSliderProps } from "react-slider";
+
+import { useVideoStore } from "$stateManager/store";
 
 import {
   activeTrack,
