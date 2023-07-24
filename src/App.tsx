@@ -1,5 +1,5 @@
 import video from "./assets/demoswing.mp4";
-import { Video } from "./components/video/video";
+import { Video } from "./components/video/videoTemp";
 import { lightTheme, darkTheme } from "./utils/theme.css";
 import { useThemeStore } from "./stateManager/store";
 
