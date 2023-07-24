@@ -13,7 +13,6 @@ type Props = {
 };
 
 export const Video = ({ src }: Props) => {
-  // const videoRef = useVideoStore((state) => state.videoRef);
   const { videoRef, isMuted, isFlipped, setVideoDuration, setCurrentTime } =
     useVideoStore((state) => ({
       videoRef: state.videoRef,
