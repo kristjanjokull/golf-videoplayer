@@ -3,11 +3,19 @@ import { Button } from "@components/button/button";
 import { FullscreenIcon } from "@components/icons/fullscreen";
 import { FullscreenExitIcon } from "@components/icons/fullScreenExit";
 
+type FullscreenFunctionTypes = () => Promise<void>;
+
+interface FullScreenElement extends HTMLElement {
+  mozRequestFullScreen?: FullscreenFunctionTypes;
+  msRequestFullscreen?: FullscreenFunctionTypes;
+  webkitRequestFullscreen?: FullscreenFunctionTypes;
+}
+
 interface FullScreenDocument extends Document {
-  msExitFullscreen?: () => Promise<void>;
-  webkitExitFullscreen?: () => Promise<void>;
-  mozCancelFullScreen?: () => Promise<void>;
-  exitFullscreen: () => Promise<void>;
+  msExitFullscreen?: FullscreenFunctionTypes;
+  webkitExitFullscreen?: FullscreenFunctionTypes;
+  mozCancelFullScreen?: FullscreenFunctionTypes;
+  exitFullscreen: FullscreenFunctionTypes;
 }
 
 export const FullScreen: React.FC = () => {
@@ -25,19 +33,18 @@ export const FullScreen: React.FC = () => {
   }, []);
 
   const goFullScreen = () => {
-    const fsElement = document.documentElement as HTMLElement & {
-      mozRequestFullScreen?: () => Promise<void>;
-      msRequestFullscreen?: () => Promise<void>;
-      webkitRequestFullscreen?: () => Promise<void>;
-    };
+    const fsElement = document.documentElement as FullScreenElement;
 
     if (fsElement.requestFullscreen) {
       void fsElement.requestFullscreen();
     } else if (fsElement.mozRequestFullScreen) {
+      /* Firefox */
       void fsElement.mozRequestFullScreen();
     } else if (fsElement.webkitRequestFullscreen) {
+      /* Chrome, Safari and Opera */
       void fsElement.webkitRequestFullscreen();
     } else if (fsElement.msRequestFullscreen) {
+      /* IE/Edge */
       void fsElement.msRequestFullscreen();
     }
   };
