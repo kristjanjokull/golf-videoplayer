@@ -1,6 +1,6 @@
 import { Controls } from "$components/controls/controls";
 import { FullScreen } from "$components/fullscreen/fullscreen";
-import { RangeSlider } from "$components/rangeslider/Rangeslider";
+import { Rangeslider } from "$components/rangeslider/rangesliderTemp";
 import { Sidebar } from "$components/sidebar/sidebar";
 import { SoundToggler } from "$components/soundToggler/soundToggler";
 import { ThemeSwitch } from "$components/themeSwitch/themeSwitch";
@@ -29,7 +29,7 @@ export const Video = ({ src }: Props) => {
         components={[ThemeSwitch, SoundToggler, VideoFlip, FullScreen]}
       />
       <div className={dock}>
-        <RangeSlider />
+        <Rangeslider />
         <Controls />
       </div>
       <video

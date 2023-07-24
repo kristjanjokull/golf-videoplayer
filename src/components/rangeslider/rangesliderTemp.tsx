@@ -14,7 +14,7 @@ import {
 type RenderThumb = ReactSliderProps<number>["renderThumb"];
 type RenderTrack = ReactSliderProps<number>["renderTrack"];
 
-export const RangeSlider = () => {
+export const Rangeslider = () => {
   const { videoRef, isPlaying, currentTime, videoDuration } = useVideoStore(
     (state) => ({
       videoRef: state.videoRef,
