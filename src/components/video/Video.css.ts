@@ -1,5 +1,5 @@
-import { style, ComplexStyleRule } from "@vanilla-extract/css";
-import { vars } from "../../utils/theme.css";
+import { vars } from "@utils/theme.css";
+import { ComplexStyleRule, style } from "@vanilla-extract/css";
 
 export const videoContainer = style({
   position: "absolute",

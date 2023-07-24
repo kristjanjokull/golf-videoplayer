@@ -1,9 +1,10 @@
 import {
+  createGlobalTheme,
   createTheme,
   createThemeContract,
-  createGlobalTheme,
 } from "@vanilla-extract/css";
-import { lightThemeColors, darkThemeColors } from "./colors";
+
+import { darkThemeColors, lightThemeColors } from "./colors";
 
 const root = createGlobalTheme("#root", {});
 

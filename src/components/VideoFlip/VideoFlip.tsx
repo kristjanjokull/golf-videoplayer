@@ -1,6 +1,6 @@
 import { Button } from "@components/button/button";
-import { FlipRightIcon } from "@components/icons/flipRight";
 import { FlipLeftIcon } from "@components/icons/flipLeft";
+import { FlipRightIcon } from "@components/icons/flipRight";
 import { useVideoStore } from "@stateManager/store";
 
 export const VideoFlip: React.FC = () => {
