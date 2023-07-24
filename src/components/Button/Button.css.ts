@@ -9,6 +9,7 @@ const buttonBase: ComplexStyleRule = {
 
 export const sidebarButton = style({
   ...buttonBase,
+  borderRadius: "10px",
   ":hover": {
     background: "#cdcdd2", //
   },

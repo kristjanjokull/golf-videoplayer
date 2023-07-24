@@ -14,8 +14,7 @@ export const SoundToggler: React.FC = () => {
       onClick={toggleMute}
       title={isMuted ? "Turn sound on" : "Turn sound off"}
     >
-      {isMuted && <MuteIcon />}
-      {!isMuted && <SoundOnIcon />}
+      {isMuted ? <MuteIcon /> : <SoundOnIcon />}
     </Button>
   );
 };

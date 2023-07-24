@@ -14,8 +14,7 @@ export const VideoFlip: React.FC = () => {
       title={!isFlipped ? "Flip video" : "Unflip video"}
       onClick={toggleFlipped}
     >
-      {!isFlipped && <FlipRightIcon />}
-      {isFlipped && <FlipLeftIcon />}
+      {!isFlipped ? <FlipRightIcon /> : <FlipLeftIcon />}
     </Button>
   );
 };
