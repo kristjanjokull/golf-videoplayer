@@ -6,7 +6,7 @@ interface SidebarProps {
   components: FunctionComponent[];
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ components }) => {
+export const Sidebar: React.FC<SidebarProps> = ({ components }) => {
   return (
     <div className={sidebar}>
       {components.map((Component, index) => (
@@ -15,5 +15,3 @@ const Sidebar: React.FC<SidebarProps> = ({ components }) => {
     </div>
   );
 };
-
-export default Sidebar;
