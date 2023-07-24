@@ -1,6 +1,6 @@
 import { Controls } from "$components/controls/controls";
 import { FullScreen } from "$components/fullscreen/fullscreen";
-import { Rangeslider } from "$components/rangeslider/rangesliderTemp";
+import { Rangeslider } from "$components/rangeslider/rangeslider";
 import { Sidebar } from "$components/sidebar/sidebar";
 import { SoundToggler } from "$components/soundToggler/soundToggler";
 import { ThemeSwitch } from "$components/themeSwitch/themeSwitch";
