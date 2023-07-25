@@ -9,7 +9,8 @@ import { darkThemeColors, lightThemeColors } from "./colors";
 const root = createGlobalTheme("#root", {});
 
 const colors = createThemeContract({
-  backgroundColor: "",
+  background: "",
+  dock: "",
   controls: {
     container: "",
     button: "",
@@ -21,7 +22,8 @@ const colors = createThemeContract({
 });
 
 export const lightTheme = createTheme(colors, {
-  backgroundColor: lightThemeColors.background,
+  background: lightThemeColors.background,
+  dock: lightThemeColors.dock,
   controls: {
     container: lightThemeColors.dock,
     button: lightThemeColors.buttons.idle,
@@ -33,7 +35,8 @@ export const lightTheme = createTheme(colors, {
 });
 
 export const darkTheme = createTheme(colors, {
-  backgroundColor: darkThemeColors.background,
+  background: darkThemeColors.background,
+  dock: darkThemeColors.dock,
   controls: {
     container: darkThemeColors.dock,
     button: darkThemeColors.buttons.idle,
