@@ -39,10 +39,6 @@ export const thumbWithTransition = style({
   transition: "left 0.8s ease-out",
 });
 
-globalStyle(`${thumb} .active`, {
-  backgroundColor: "grey",
-});
-
 const trackBase: ComplexStyleRule = {
   position: "relative",
   background: vars.colors.slider.trackUnPlayed,

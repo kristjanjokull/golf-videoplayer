@@ -6,10 +6,3 @@ export const controls = style({
   alignItems: "center",
   justifyContent: "center",
 });
-
-export const controlsButton = style({
-  background: "none",
-  boxShadow: "none",
-  border: "none",
-  cursor: "pointer",
-});

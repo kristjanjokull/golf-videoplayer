@@ -16,11 +16,12 @@ const colors = createThemeContract({
     trackPlayed: "",
     trackUnPlayed: "",
   },
-  controls: {
-    button: "",
-    buttonActive: "",
-    slider: "",
-    sliderActive: "",
+  sidebarButtons: {
+    buttonIdle: "",
+  },
+  controlButtons: {
+    buttonIdle: "",
+    buttonHover: "",
   },
 });
 
@@ -32,11 +33,12 @@ export const lightTheme = createTheme(colors, {
     trackPlayed: lightThemeColors.slider.trackPlayed,
     trackUnPlayed: lightThemeColors.slider.trackUnPlayed,
   },
-  controls: {
-    button: lightThemeColors.buttons.idle,
-    buttonActive: lightThemeColors.buttons.hover,
-    slider: lightThemeColors.slider.trackUnPlayed,
-    sliderActive: lightThemeColors.slider.trackPlayed,
+  sidebarButtons: {
+    buttonIdle: "",
+  },
+  controlButtons: {
+    buttonIdle: lightThemeColors.controlButtons.buttonIdle,
+    buttonHover: "",
   },
 });
 
@@ -48,11 +50,12 @@ export const darkTheme = createTheme(colors, {
     trackPlayed: darkThemeColors.slider.trackPlayed,
     trackUnPlayed: darkThemeColors.slider.trackUnPlayed,
   },
-  controls: {
-    button: darkThemeColors.buttons.idle,
-    buttonActive: darkThemeColors.buttons.hover,
-    slider: darkThemeColors.slider.trackUnPlayed,
-    sliderActive: darkThemeColors.slider.trackPlayed,
+  sidebarButtons: {
+    buttonIdle: "",
+  },
+  controlButtons: {
+    buttonIdle: darkThemeColors.controlButtons.buttonIdle,
+    buttonHover: "",
   },
 });
 

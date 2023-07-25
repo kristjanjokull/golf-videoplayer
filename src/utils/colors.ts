@@ -1,9 +1,9 @@
 type Colors = {
   background: string;
   buttons: Record<"idle" | "hover", string>;
-  controlButtons: Record<"idle" | "hover", string>;
   dock: string;
   slider: Record<"thumb" | "trackPlayed" | "trackUnPlayed", string>;
+  controlButtons: Record<"buttonIdle" | "buttonHover", string>;
 };
 
 export const lightThemeColors: Colors = {
@@ -12,15 +12,15 @@ export const lightThemeColors: Colors = {
     idle: "#ece2e2",
     hover: "#dbdcdf",
   },
-  controlButtons: {
-    idle: "white",
-    hover: "black",
-  },
   dock: "rgba(117, 117, 117, 0.5)",
   slider: {
     thumb: "#ecc90a",
     trackPlayed: "#ecc90a",
     trackUnPlayed: "#d7d5d5",
+  },
+  controlButtons: {
+    buttonIdle: "#fff",
+    buttonHover: "",
   },
 };
 
@@ -30,14 +30,14 @@ export const darkThemeColors: Colors = {
     idle: "#ece2e2",
     hover: "#dbdcdf",
   },
-  controlButtons: {
-    idle: "white",
-    hover: "black",
-  },
   dock: "rgba(117, 117, 117, 0.5)",
   slider: {
     thumb: "#ecc90a",
     trackPlayed: "#ecc90a",
     trackUnPlayed: "#d7d5d5",
+  },
+  controlButtons: {
+    buttonIdle: "#fff",
+    buttonHover: "",
   },
 };
