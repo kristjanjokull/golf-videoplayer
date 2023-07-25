@@ -1,5 +1,6 @@
 import { ComplexStyleRule, style } from "@vanilla-extract/css";
 
+import { breakpoints } from "$utils/breakpoints";
 import { vars } from "$utils/theme.css";
 
 export const videoContainer = style({
@@ -33,6 +34,11 @@ export const dock = style({
   zIndex: 100,
   // opacity: 0,
   transition: "opacity 150ms ease-in-out",
-  background: vars.colors.dock,
   padding: "1rem 0",
+  background: vars.colors.dockTransparent,
+  "@media": {
+    [`${breakpoints.phablet}, ${breakpoints.phone}`]: {
+      background: vars.colors.dock,
+    },
+  },
 });

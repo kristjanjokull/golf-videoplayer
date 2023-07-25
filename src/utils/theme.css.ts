@@ -11,6 +11,7 @@ const root = createGlobalTheme("#root", {});
 const colors = createThemeContract({
   background: "",
   dock: "",
+  dockTransparent: "",
   slider: {
     thumb: "",
     trackPlayed: "",
@@ -31,6 +32,7 @@ const colors = createThemeContract({
 export const lightTheme = createTheme(colors, {
   background: lightThemeColors.background,
   dock: lightThemeColors.dock,
+  dockTransparent: lightThemeColors.dockTransparent,
   slider: {
     thumb: lightThemeColors.slider.thumb,
     trackPlayed: lightThemeColors.slider.trackPlayed,
@@ -51,6 +53,7 @@ export const lightTheme = createTheme(colors, {
 export const darkTheme = createTheme(colors, {
   background: darkThemeColors.background,
   dock: darkThemeColors.dock,
+  dockTransparent: darkThemeColors.dockTransparent,
   slider: {
     thumb: darkThemeColors.slider.thumb,
     trackPlayed: darkThemeColors.slider.trackPlayed,
