@@ -38,7 +38,7 @@ export const lightTheme = createTheme(colors, {
   },
   controlButtons: {
     buttonIdle: lightThemeColors.controlButtons.buttonIdle,
-    buttonHover: "",
+    buttonHover: lightThemeColors.controlButtons.buttonHover,
   },
 });
 
@@ -55,7 +55,7 @@ export const darkTheme = createTheme(colors, {
   },
   controlButtons: {
     buttonIdle: darkThemeColors.controlButtons.buttonIdle,
-    buttonHover: "",
+    buttonHover: darkThemeColors.controlButtons.buttonHover,
   },
 });
 

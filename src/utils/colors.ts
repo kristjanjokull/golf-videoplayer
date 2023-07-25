@@ -20,7 +20,7 @@ export const lightThemeColors: Colors = {
   },
   controlButtons: {
     buttonIdle: "#fff",
-    buttonHover: "",
+    buttonHover: "#cdcdd2",
   },
 };
 
@@ -38,6 +38,6 @@ export const darkThemeColors: Colors = {
   },
   controlButtons: {
     buttonIdle: "#fff",
-    buttonHover: "",
+    buttonHover: "#cdcdd2",
   },
 };

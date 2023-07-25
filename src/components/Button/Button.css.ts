@@ -1,6 +1,6 @@
 import { ComplexStyleRule, globalStyle, style } from "@vanilla-extract/css";
-// import { vars } from "../../utils/theme.css";
-// vars.colors.backgroundColor (see theme.css.ts)
+
+import { vars } from "$utils/theme.css";
 
 const buttonBase: ComplexStyleRule = {
   border: "none",
@@ -24,5 +24,5 @@ export const controlButton = style({
 });
 
 globalStyle(`${controlButton}:hover svg path`, {
-  fill: "#cdcdd2",
+  fill: vars.colors.controlButtons.buttonHover,
 });
