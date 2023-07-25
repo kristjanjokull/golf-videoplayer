@@ -4,6 +4,10 @@ type Colors = {
   dock: string;
   slider: Record<"thumb" | "trackPlayed" | "trackUnPlayed", string>;
   controlButtons: Record<"buttonIdle" | "buttonHover", string>;
+  sidebarButtons: Record<
+    "background" | "backgroundHover" | "icon" | "iconHover",
+    string
+  >;
 };
 
 export const lightThemeColors: Colors = {
@@ -22,6 +26,12 @@ export const lightThemeColors: Colors = {
     buttonIdle: "#fff",
     buttonHover: "#cdcdd2",
   },
+  sidebarButtons: {
+    background: "#e9e9ed",
+    backgroundHover: "#cdcdd2",
+    icon: "#000",
+    iconHover: "#000",
+  },
 };
 
 export const darkThemeColors: Colors = {
@@ -39,5 +49,11 @@ export const darkThemeColors: Colors = {
   controlButtons: {
     buttonIdle: "#fff",
     buttonHover: "#cdcdd2",
+  },
+  sidebarButtons: {
+    background: "#e9e9ed",
+    backgroundHover: "#cdcdd2",
+    icon: "#000",
+    iconHover: "#000",
   },
 };

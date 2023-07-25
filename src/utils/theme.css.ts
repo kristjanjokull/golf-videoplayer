@@ -17,7 +17,10 @@ const colors = createThemeContract({
     trackUnPlayed: "",
   },
   sidebarButtons: {
-    buttonIdle: "",
+    background: "",
+    backgroundHover: "",
+    icon: "",
+    iconHover: "",
   },
   controlButtons: {
     buttonIdle: "",
@@ -34,7 +37,10 @@ export const lightTheme = createTheme(colors, {
     trackUnPlayed: lightThemeColors.slider.trackUnPlayed,
   },
   sidebarButtons: {
-    buttonIdle: "",
+    background: lightThemeColors.sidebarButtons.background,
+    backgroundHover: lightThemeColors.sidebarButtons.backgroundHover,
+    icon: lightThemeColors.sidebarButtons.icon,
+    iconHover: lightThemeColors.sidebarButtons.iconHover,
   },
   controlButtons: {
     buttonIdle: lightThemeColors.controlButtons.buttonIdle,
@@ -51,7 +57,10 @@ export const darkTheme = createTheme(colors, {
     trackUnPlayed: darkThemeColors.slider.trackUnPlayed,
   },
   sidebarButtons: {
-    buttonIdle: "",
+    background: darkThemeColors.sidebarButtons.background,
+    backgroundHover: darkThemeColors.sidebarButtons.backgroundHover,
+    icon: darkThemeColors.sidebarButtons.icon,
+    iconHover: darkThemeColors.sidebarButtons.iconHover,
   },
   controlButtons: {
     buttonIdle: darkThemeColors.controlButtons.buttonIdle,
