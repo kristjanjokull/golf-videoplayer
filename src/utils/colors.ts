@@ -34,9 +34,7 @@ const _light_MainColorTransparent = Color(_light_MainColor)
   .toString();
 
 const _dark_mainColor = "#555";
-const _dark_SidebarButtonsBackgroundHover = Color(_dark_mainColor)
-  .darken(0.1)
-  .toString();
+const _dark_mainColorDarker = Color(_dark_mainColor).darken(0.1).toString();
 
 export const lightThemeColors: Colors = {
   background: _white,
@@ -78,7 +76,7 @@ export const darkThemeColors: Colors = {
   },
   sidebarButtons: {
     background: _dark_mainColor,
-    backgroundHover: _dark_SidebarButtonsBackgroundHover,
+    backgroundHover: _dark_mainColorDarker,
     icon: _white,
     iconHover: _white,
   },
