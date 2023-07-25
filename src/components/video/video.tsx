@@ -7,7 +7,7 @@ import { ThemeSwitch } from "$components/themeSwitch/themeSwitch";
 import { VideoFlip } from "$components/videoFlip/videoFlip";
 import { useVideoStore } from "$utils/state";
 
-import { dock, video, videoContainer, videoFlipped } from "./videoTemp.css";
+import { dock, video, videoContainer, videoFlipped } from "./video.css";
 
 type Props = {
   src: string;
