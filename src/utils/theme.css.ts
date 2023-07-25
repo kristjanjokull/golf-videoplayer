@@ -24,8 +24,10 @@ const colors = createThemeContract({
     iconHover: "",
   },
   controlButtons: {
-    buttonIdle: "",
-    buttonHover: "",
+    background: "",
+    backgroundHover: "",
+    icon: "",
+    iconHover: "",
   },
 });
 
@@ -45,8 +47,10 @@ export const lightTheme = createTheme(colors, {
     iconHover: lightThemeColors.sidebarButtons.iconHover,
   },
   controlButtons: {
-    buttonIdle: lightThemeColors.controlButtons.buttonIdle,
-    buttonHover: lightThemeColors.controlButtons.buttonHover,
+    background: lightThemeColors.controlButtons.background,
+    backgroundHover: lightThemeColors.controlButtons.backgroundHover,
+    icon: lightThemeColors.controlButtons.icon,
+    iconHover: lightThemeColors.controlButtons.iconHover,
   },
 });
 
@@ -66,8 +70,10 @@ export const darkTheme = createTheme(colors, {
     iconHover: darkThemeColors.sidebarButtons.iconHover,
   },
   controlButtons: {
-    buttonIdle: darkThemeColors.controlButtons.buttonIdle,
-    buttonHover: darkThemeColors.controlButtons.buttonHover,
+    background: darkThemeColors.controlButtons.background,
+    backgroundHover: darkThemeColors.controlButtons.backgroundHover,
+    icon: darkThemeColors.controlButtons.icon,
+    iconHover: darkThemeColors.controlButtons.iconHover,
   },
 });
 

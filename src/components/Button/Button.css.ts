@@ -25,5 +25,5 @@ export const controlButton = style({
 });
 
 globalStyle(`${controlButton}:hover svg path`, {
-  fill: vars.colors.controlButtons.buttonHover,
+  fill: vars.colors.controlButtons.iconHover,
 });
