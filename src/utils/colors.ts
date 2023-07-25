@@ -3,7 +3,7 @@ type Colors = {
   buttons: Record<"idle" | "hover", string>;
   controlButtons: Record<"idle" | "hover", string>;
   dock: string;
-  slider: Record<"knob" | "trackPlayed" | "trackUnPlayed", string>;
+  slider: Record<"thumb" | "trackPlayed" | "trackUnPlayed", string>;
 };
 
 export const lightThemeColors: Colors = {
@@ -18,7 +18,7 @@ export const lightThemeColors: Colors = {
   },
   dock: "rgba(117, 117, 117, 0.5)",
   slider: {
-    knob: "#ecc90a",
+    thumb: "#ecc90a",
     trackPlayed: "#ecc90a",
     trackUnPlayed: "#d7d5d5",
   },
@@ -36,7 +36,7 @@ export const darkThemeColors: Colors = {
   },
   dock: "rgba(117, 117, 117, 0.5)",
   slider: {
-    knob: "#ecc90a",
+    thumb: "#ecc90a",
     trackPlayed: "#ecc90a",
     trackUnPlayed: "#d7d5d5",
   },

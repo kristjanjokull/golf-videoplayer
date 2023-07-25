@@ -11,39 +11,48 @@ const root = createGlobalTheme("#root", {});
 const colors = createThemeContract({
   background: "",
   dock: "",
+  slider: {
+    thumb: "",
+    trackPlayed: "",
+    trackUnPlayed: "",
+  },
   controls: {
-    container: "",
     button: "",
     buttonActive: "",
     slider: "",
     sliderActive: "",
-    thumb: "",
   },
 });
 
 export const lightTheme = createTheme(colors, {
   background: lightThemeColors.background,
   dock: lightThemeColors.dock,
+  slider: {
+    thumb: lightThemeColors.slider.thumb,
+    trackPlayed: lightThemeColors.slider.trackPlayed,
+    trackUnPlayed: lightThemeColors.slider.trackUnPlayed,
+  },
   controls: {
-    container: lightThemeColors.dock,
     button: lightThemeColors.buttons.idle,
     buttonActive: lightThemeColors.buttons.hover,
     slider: lightThemeColors.slider.trackUnPlayed,
     sliderActive: lightThemeColors.slider.trackPlayed,
-    thumb: lightThemeColors.slider.knob,
   },
 });
 
 export const darkTheme = createTheme(colors, {
   background: darkThemeColors.background,
   dock: darkThemeColors.dock,
+  slider: {
+    thumb: darkThemeColors.slider.thumb,
+    trackPlayed: darkThemeColors.slider.trackPlayed,
+    trackUnPlayed: darkThemeColors.slider.trackUnPlayed,
+  },
   controls: {
-    container: darkThemeColors.dock,
     button: darkThemeColors.buttons.idle,
     buttonActive: darkThemeColors.buttons.hover,
     slider: darkThemeColors.slider.trackUnPlayed,
     sliderActive: darkThemeColors.slider.trackPlayed,
-    thumb: darkThemeColors.slider.knob,
   },
 });
 
