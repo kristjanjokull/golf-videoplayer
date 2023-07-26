@@ -1,6 +1,6 @@
 import { Button } from "$components/button/button";
-import { MoonIcon } from "$components/icons/moon";
-import { SunIcon } from "$components/icons/sun";
+import { MoonIcon } from "$components/icons/moonTemp";
+import { SunIcon } from "$components/icons/sunTemp";
 import { useThemeStore } from "$utils/state";
 
 export const ThemeSwitch: React.FC = () => {
