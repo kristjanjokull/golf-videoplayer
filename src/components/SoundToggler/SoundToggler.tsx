@@ -1,4 +1,4 @@
-import { Button } from "$components/button/button";
+import { Button } from "$components/buttonTemp/button";
 import { MuteIcon } from "$components/icons/mute";
 import { SoundOnIcon } from "$components/icons/soundOn";
 import { useVideoStore } from "$utils/state";

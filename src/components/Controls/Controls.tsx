@@ -1,4 +1,4 @@
-import { Button } from "$components/button/button";
+import { Button } from "$components/buttonTemp/button";
 import { ForwardIcon } from "$components/icons/forward";
 import { PauseIcon } from "$components/icons/pause";
 import { PlayIcon } from "$components/icons/play";

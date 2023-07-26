@@ -1,4 +1,4 @@
-import { Button } from "$components/button/button";
+import { Button } from "$components/buttonTemp/button";
 import { FlipLeftIcon } from "$components/icons/flipLeft";
 import { FlipRightIcon } from "$components/icons/flipRight";
 import { useVideoStore } from "$utils/state";
