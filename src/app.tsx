@@ -1,16 +1,8 @@
 import video from "./assets/demoswing.mp4";
 import { Video } from "./components/video/video";
-import { useThemeStore } from "./utils/state";
-import { darkTheme, lightTheme } from "./utils/theme.css";
 
 function App() {
-  const { theme } = useThemeStore();
-
-  return (
-    <div className={theme === "light" ? lightTheme : darkTheme}>
-      <Video src={video} />
-    </div>
-  );
+  return <Video src={video} colorTheme="dark" />;
 }
 
 export default App;
