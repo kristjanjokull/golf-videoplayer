@@ -1,4 +1,4 @@
-import { Button } from "$components/buttonTemp/button";
+import { Button } from "$components/button/button";
 import { MoonIcon } from "$components/icons/moon";
 import { SunIcon } from "$components/icons/sun";
 import { useThemeStore } from "$utils/state";

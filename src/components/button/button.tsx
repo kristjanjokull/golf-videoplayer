@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { controlButton, sidebarButton } from "./buttonTemp.css";
+import { controlButton, sidebarButton } from "./button.css";
 
 type ButtonProps = {
   type: "control" | "sidebar";
