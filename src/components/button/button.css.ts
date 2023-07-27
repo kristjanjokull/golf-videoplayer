@@ -5,6 +5,11 @@ import { vars } from "$utils/theme.css";
 const buttonBase: ComplexStyleRule = {
   border: "none",
   cursor: "pointer",
+  ":focus-within": {
+    outlineStyle: "solid",
+    outlineColor: "blue",
+    outlineWidth: 2,
+  },
 };
 
 export const sidebarButton = style({

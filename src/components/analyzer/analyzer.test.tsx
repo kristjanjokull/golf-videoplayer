@@ -3,7 +3,7 @@ import { describe, expect, test } from "vitest";
 
 import videoSrc from "$assets/demoswing.mp4";
 
-import { Video } from "./video";
+import { Video } from "./analyzer";
 
 describe("Video", () => {
   test("renders without crashing", () => {

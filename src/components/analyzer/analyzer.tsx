@@ -10,7 +10,7 @@ import { VideoFlip } from "$components/videoFlip/videoFlip";
 import { Theme, useThemeStore, useVideoStore } from "$utils/state";
 import { darkTheme, lightTheme } from "$utils/theme.css";
 
-import { dock, video, videoContainer, videoFlipped } from "./video.css";
+import { dock, video, videoContainer, videoFlipped } from "./analyzer.css";
 
 type Props = {
   src: string;
