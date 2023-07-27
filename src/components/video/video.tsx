@@ -5,7 +5,7 @@ import { FullScreen } from "$components/fullscreen/fullscreen";
 import { Rangeslider } from "$components/rangeslider/rangeslider";
 import { Sidebar } from "$components/sidebar/sidebar";
 import { SoundToggler } from "$components/soundToggler/soundToggler";
-import { ThemeSwitch } from "$components/themeSwitch/themeSwitchTemp";
+import { ThemeSwitch } from "$components/themeSwitch/themeSwitch";
 import { VideoFlip } from "$components/videoFlip/videoFlip";
 import { Theme, useThemeStore, useVideoStore } from "$utils/state";
 import { darkTheme, lightTheme } from "$utils/theme.css";
