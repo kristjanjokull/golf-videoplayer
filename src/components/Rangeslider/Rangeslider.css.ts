@@ -32,7 +32,13 @@ const thumbBase: ComplexStyleRule = {
   lineHeight: 38,
 };
 
-export const thumb = style(thumbBase);
+export const thumb = style({
+  ...thumbBase,
+  ":focus-within": {
+    outlineStyle: "solid",
+    outlineColor: "blue",
+  },
+});
 
 export const thumbWithTransition = style({
   ...thumbBase,
