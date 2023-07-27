@@ -3,11 +3,11 @@ import { describe, expect, test } from "vitest";
 
 import videoSrc from "$assets/demoswing.mp4";
 
-import { Video } from "./analyzer";
+import { Analyzer } from "./analyzer";
 
 describe("Video", () => {
   test("renders without crashing", () => {
-    const { container } = render(<Video src={videoSrc} />);
+    const { container } = render(<Analyzer src={videoSrc} />);
 
     expect(container).toBeDefined();
   });
