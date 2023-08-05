@@ -7,7 +7,11 @@ import { useVideoStore } from "$utils/state";
 
 import { controls } from "./controls.css";
 
-export const Controls: React.FC = () => {
+type Props = {
+  variant: "play" | "time";
+};
+
+export const Controls: React.FC<Props> = ({ variant }) => {
   const { rewind, forward, togglePlay, isPlaying } = useVideoStore((state) => ({
     rewind: state.rewind,
     forward: state.forward,
@@ -17,20 +21,27 @@ export const Controls: React.FC = () => {
 
   return (
     <div className={controls}>
-      <Button type="control" title="Rewind" onClick={rewind}>
-        <RewindIcon />
-      </Button>
-      <Button type="control" title="Forward" onClick={forward}>
-        <ForwardIcon />
-      </Button>
-      <Button
-        type="control"
-        title={!isPlaying ? "Play" : "Pause"}
-        onClick={togglePlay}
-      >
-        {!isPlaying && <PlayIcon />}
-        {isPlaying && <PauseIcon />}
-      </Button>
+      {variant === "time" && (
+        <>
+          <Button type="control" title="Rewind" onClick={rewind}>
+            <RewindIcon />
+          </Button>
+          <Button type="control" title="Forward" onClick={forward}>
+            <ForwardIcon />
+          </Button>
+        </>
+      )}
+
+      {variant === "play" && (
+        <Button
+          type="control"
+          title={!isPlaying ? "Play" : "Pause"}
+          onClick={togglePlay}
+        >
+          {!isPlaying && <PlayIcon />}
+          {isPlaying && <PauseIcon />}
+        </Button>
+      )}
     </div>
   );
 };

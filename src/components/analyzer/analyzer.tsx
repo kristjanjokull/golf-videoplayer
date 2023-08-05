@@ -30,8 +30,9 @@ export const Analyzer = ({ src }: Props) => {
         components={[ThemeSwitch, SoundToggler, VideoFlip, FullScreen]}
       />
       <div className={dock}>
-        <Controls />
+        <Controls variant="play" />
         <Rangeslider />
+        <Controls variant="time" />
       </div>
       <video
         ref={videoRef}
