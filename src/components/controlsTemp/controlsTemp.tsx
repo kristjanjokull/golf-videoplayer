@@ -5,7 +5,7 @@ import { PlayIcon } from "$components/icons/play";
 import { RewindIcon } from "$components/icons/rewind";
 import { useVideoStore } from "$utils/state";
 
-import { controls } from "./controls.css";
+import { controls } from "./controlsTemp.css";
 
 type Props = {
   variant: "play" | "time";
