@@ -7,7 +7,6 @@ export const horizontalSlider = style({
   width: "100%",
   height: 40,
   maxWidth: 500,
-  margin: "auto",
   cursor: "pointer",
   "@media": {
     [`${breakpoints.phablet}, ${breakpoints.phone}`]: {

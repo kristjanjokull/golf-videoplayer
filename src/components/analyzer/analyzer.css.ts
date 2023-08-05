@@ -36,6 +36,9 @@ export const dock = style({
   transition: "opacity 150ms ease-in-out",
   padding: "1rem 0",
   background: vars.colors.dockTransparent,
+  display: "flex",
+  justifyContent: "center",
+  gridGap: "0.8rem",
   "@media": {
     [`${breakpoints.phablet}, ${breakpoints.phone}`]: {
       background: vars.colors.dock,

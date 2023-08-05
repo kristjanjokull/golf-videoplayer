@@ -9,7 +9,7 @@ import {
   thumbWithTransition,
   track,
   trackWithTransition,
-} from "./rangeslider.css";
+} from "./rangesliderTemp.css";
 
 type RenderThumb = ReactSliderProps<number>["renderThumb"];
 type RenderTrack = ReactSliderProps<number>["renderTrack"];

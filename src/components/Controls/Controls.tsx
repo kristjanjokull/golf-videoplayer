@@ -20,6 +20,9 @@ export const Controls: React.FC = () => {
       <Button type="control" title="Rewind" onClick={rewind}>
         <RewindIcon />
       </Button>
+      <Button type="control" title="Forward" onClick={forward}>
+        <ForwardIcon />
+      </Button>
       <Button
         type="control"
         title={!isPlaying ? "Play" : "Pause"}
@@ -27,9 +30,6 @@ export const Controls: React.FC = () => {
       >
         {!isPlaying && <PlayIcon />}
         {isPlaying && <PauseIcon />}
-      </Button>
-      <Button type="control" title="Forward" onClick={forward}>
-        <ForwardIcon />
       </Button>
     </div>
   );
