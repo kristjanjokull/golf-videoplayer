@@ -1,4 +1,4 @@
-import { Controls } from "$components/controlsTemp/controlsTemp";
+import { Controls } from "$components/controls/controls";
 import { FullScreen } from "$components/fullscreen/fullscreen";
 import { Rangeslider } from "$components/rangeslider/rangeslider";
 import { Sidebar } from "$components/sidebar/sidebar";
