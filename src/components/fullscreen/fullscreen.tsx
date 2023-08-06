@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
 import { Button } from "$components/button/button";
-import { FullscreenIcon } from "$components/icons/fullscreen";
-import { FullscreenExitIcon } from "$components/icons/fullScreenExit";
+import { FullscreenExitIcon } from "$components/icons/fullScreenExitTemp";
+import { FullscreenIcon } from "$components/icons/fullscreenTemp";
 
 type FullscreenFunctionTypes = () => Promise<void>;
 

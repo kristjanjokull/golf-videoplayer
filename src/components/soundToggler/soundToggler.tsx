@@ -1,6 +1,6 @@
 import { Button } from "$components/button/button";
-import { MuteIcon } from "$components/icons/mute";
-import { SoundOnIcon } from "$components/icons/soundOn";
+import { MuteIcon } from "$components/icons/muteTemp";
+import { SoundOnIcon } from "$components/icons/soundOnTemp";
 import { useVideoStore } from "$utils/state";
 
 export const SoundToggler: React.FC = () => {
