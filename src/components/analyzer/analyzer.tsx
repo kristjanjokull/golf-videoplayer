@@ -4,7 +4,7 @@ import { Rangeslider } from "$components/rangeslider/rangeslider";
 import { Sidebar } from "$components/sidebar/sidebar";
 import { SoundToggler } from "$components/soundToggler/soundToggler";
 import { ThemeSwitch } from "$components/themeSwitch/themeSwitch";
-import { VideoFlip } from "$components/videoFlipTemp/videoFlipTemp";
+import { VideoFlip } from "$components/videoFlip/videoFlip";
 import { Theme, useVideoStore } from "$utils/state";
 
 import { dock, video, videoContainer, videoFlipped } from "./analyzer.css";
