@@ -1,5 +1,5 @@
 import { Button } from "$components/button/button";
-import { ForwardIcon } from "$components/icons/forward";
+import { ForwardIcon } from "$components/icons/forwardTemp";
 import { PauseIcon } from "$components/icons/pauseTemp";
 import { PlayIcon } from "$components/icons/playTemp";
 import { RewindIcon } from "$components/icons/rewindTemp";
