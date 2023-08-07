@@ -1,7 +1,6 @@
 import ReactSlider, { ReactSliderProps } from "react-slider";
 
-import { useVideoStore } from "$utils/state";
-
+import { useVideoStore } from "../../utils/state";
 import {
   activeTrack,
   horizontalSlider,

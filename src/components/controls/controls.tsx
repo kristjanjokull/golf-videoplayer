@@ -1,10 +1,9 @@
-import { Button } from "$components/button/button";
-import { ForwardIcon } from "$components/icons/forward";
-import { PauseIcon } from "$components/icons/pause";
-import { PlayIcon } from "$components/icons/play";
-import { RewindIcon } from "$components/icons/rewind";
-import { useVideoStore } from "$utils/state";
-
+import { useVideoStore } from "../../utils/state";
+import { Button } from "../button/button";
+import { ForwardIcon } from "../icons/forward";
+import { PauseIcon } from "../icons/pause";
+import { PlayIcon } from "../icons/play";
+import { RewindIcon } from "../icons/rewind";
 import { controls } from "./controls.css";
 
 type Props = {

@@ -1,6 +1,6 @@
 import { ComplexStyleRule, globalStyle, style } from "@vanilla-extract/css";
 
-import { vars } from "$utils/theme.css";
+import { vars } from "../../utils/theme.css";
 
 const buttonBase: ComplexStyleRule = {
   border: "none",

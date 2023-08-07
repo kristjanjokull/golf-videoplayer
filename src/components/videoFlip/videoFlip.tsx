@@ -1,7 +1,7 @@
-import { Button } from "$components/button/button";
-import { FlipLeftIcon } from "$components/icons/flipLeft";
-import { FlipRightIcon } from "$components/icons/flipRight";
-import { useVideoStore } from "$utils/state";
+import { useVideoStore } from "../../utils/state";
+import { Button } from "../button/button";
+import { FlipLeftIcon } from "../icons/flipLeft";
+import { FlipRightIcon } from "../icons/flipRight";
 
 export const VideoFlip: React.FC = () => {
   const { isFlipped, toggleFlipped } = useVideoStore((state) => ({

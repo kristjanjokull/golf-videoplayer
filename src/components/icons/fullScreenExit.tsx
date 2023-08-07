@@ -1,4 +1,4 @@
-import { vars } from "$utils/theme.css";
+import { vars } from "../../utils/theme.css";
 
 export const FullscreenExitIcon = () => {
   return (

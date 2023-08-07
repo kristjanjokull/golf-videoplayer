@@ -1,7 +1,7 @@
 import { ComplexStyleRule, style } from "@vanilla-extract/css";
 
-import { breakpoints } from "$utils/breakpoints";
-import { vars } from "$utils/theme.css";
+import { breakpoints } from "../../utils/breakpoints";
+import { vars } from "../../utils/theme.css";
 
 export const videoContainer = style({
   position: "absolute",

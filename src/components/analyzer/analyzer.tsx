@@ -1,12 +1,11 @@
-import { Controls } from "$components/controls/controls";
-import { FullScreen } from "$components/fullscreen/fullscreen";
-import { Rangeslider } from "$components/rangeslider/rangeslider";
-import { Sidebar } from "$components/sidebar/sidebar";
-import { SoundToggler } from "$components/soundToggler/soundToggler";
-import { ThemeSwitch } from "$components/themeSwitch/themeSwitch";
-import { VideoFlip } from "$components/videoFlip/videoFlip";
-import { Theme, useVideoStore } from "$utils/state";
-
+import { Theme, useVideoStore } from "../../utils/state";
+import { Controls } from "../controls/controls";
+import { FullScreen } from "../fullscreen/fullscreen";
+import { Rangeslider } from "../rangeslider/rangeslider";
+import { Sidebar } from "../sidebar/sidebar";
+import { SoundToggler } from "../soundToggler/soundToggler";
+import { ThemeSwitch } from "../themeSwitch/themeSwitch";
+import { VideoFlip } from "../videoFlip/videoFlip";
 import { dock, video, videoContainer, videoFlipped } from "./analyzer.css";
 
 type Props = {

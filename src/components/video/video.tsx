@@ -1,10 +1,8 @@
 import { FC, useEffect } from "react";
 
-import { Analyzer } from "$components/analyzer/analyzer";
-import { Theme } from "$utils/state";
-import { useThemeStore } from "$utils/state";
-import { darkTheme, lightTheme } from "$utils/theme.css";
-
+import { Theme, useThemeStore } from "../../utils/state";
+import { darkTheme, lightTheme } from "../../utils/theme.css";
+import { Analyzer } from "../analyzer/analyzer";
 import { videoContainer } from "./video.css";
 
 type Props = {
