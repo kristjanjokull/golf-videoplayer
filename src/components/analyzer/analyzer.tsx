@@ -1,15 +1,13 @@
-import { Theme, useVideoStore } from "../../utils/state";
+import { useVideoStore } from "../../utils/state";
 import { Controls } from "../controls/controls";
 import { FullScreen } from "../fullscreen/fullscreen";
 import { Rangeslider } from "../rangeslider/rangeslider";
 import { Sidebar } from "../sidebar/sidebar";
 import { SoundToggler } from "../soundToggler/soundToggler";
-import { ThemeSwitch } from "../themeSwitch/themeSwitch";
 import { VideoFlip } from "../videoFlip/videoFlip";
 
 type Props = {
   src: string;
-  colorTheme?: Theme;
 };
 
 export const Analyzer = ({ src }: Props) => {
@@ -24,9 +22,7 @@ export const Analyzer = ({ src }: Props) => {
 
   return (
     <div className="videoContainer">
-      <Sidebar
-        components={[ThemeSwitch, SoundToggler, VideoFlip, FullScreen]}
-      />
+      <Sidebar components={[SoundToggler, VideoFlip, FullScreen]} />
       <div className="dock">
         <Controls variant="play" />
         <Rangeslider />

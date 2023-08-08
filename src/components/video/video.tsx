@@ -1,9 +1,8 @@
 import "../../styles/styles.css";
 
-import { FC, useEffect } from "react";
+import { FC } from "react";
 
-import { Theme, useThemeStore } from "../../utils/state";
-import { darkTheme, lightTheme } from "../../utils/theme.css";
+import { Theme } from "../../utils/state";
 import { Analyzer } from "../analyzer/analyzer";
 
 type Props = {
@@ -11,29 +10,16 @@ type Props = {
   colorTheme?: Theme;
 };
 
-export const Video: FC<Props> = ({ src, colorTheme = "light" }) => {
-  const { theme, setTheme } = useThemeStore((state) => ({
-    theme: state.theme,
-    setTheme: state.setTheme,
-  }));
-
-  useEffect(() => {
-    if (colorTheme) {
-      setTheme(colorTheme);
-    }
-  }, [colorTheme, setTheme]);
-
+export const Video: FC<Props> = ({ src }) => {
   return (
-    <div className={theme === "light" ? lightTheme : darkTheme}>
-      <div>
-        {src.length === 1 && <Analyzer src={src[0]} colorTheme={colorTheme} />}
-        {src.length === 2 && (
-          <>
-            <Analyzer src={src[0]} colorTheme={colorTheme} />
-            <Analyzer src={src[1]} colorTheme={colorTheme} />
-          </>
-        )}
-      </div>
+    <div>
+      {src.length === 1 && <Analyzer src={src[0]} />}
+      {src.length === 2 && (
+        <>
+          <Analyzer src={src[0]} />
+          <Analyzer src={src[1]} />
+        </>
+      )}
     </div>
   );
 };
