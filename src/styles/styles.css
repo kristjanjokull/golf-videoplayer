@@ -107,6 +107,18 @@
   transition: "left 0.8s ease-out";
 }
 
+/* =============== Sidebar ===================== */
+.sidebar {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 0.5rem;
+  width: 60px;
+  z-index: 2;
+}
+
 /* =============== Button ===================== */
 
 .button {
