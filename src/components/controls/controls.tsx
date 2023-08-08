@@ -4,7 +4,6 @@ import { ForwardIcon } from "../icons/forward";
 import { PauseIcon } from "../icons/pause";
 import { PlayIcon } from "../icons/play";
 import { RewindIcon } from "../icons/rewind";
-import { controls } from "./controls.css";
 
 type Props = {
   variant: "play" | "time";
@@ -19,7 +18,7 @@ export const Controls: React.FC<Props> = ({ variant }) => {
   }));
 
   return (
-    <div className={controls}>
+    <div className="controls">
       {variant === "time" && (
         <>
           <Button type="control" title="Rewind" onClick={rewind}>

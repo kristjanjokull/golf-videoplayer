@@ -41,3 +41,42 @@
 .video--flipped {
   transform: rotateY(180deg);
 }
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  border: none;
+  cursor: pointer;
+}
+
+.button:focus-within {
+  outline-style: solid;
+  outline-color: blue;
+  outline-width: 2;
+}
+
+.button__control {
+  background: none;
+}
+
+.button__control:hover {
+  background: none;
+}
+
+.button__control:hover svg path {
+  fill: hsl(0, 0%, 60%);
+}
+
+.button__sidebar {
+  background: "hsl(0, 0%, 89.5%)";
+  border-radius: 10px;
+}
+
+.button__sidebar:hover {
+  background: hsl(0, 0%, 80.5%);
+}

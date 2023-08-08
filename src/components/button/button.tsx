@@ -1,7 +1,5 @@
 import { FC } from "react";
 
-import { controlButton, sidebarButton } from "./button.css";
-
 type ButtonProps = {
   type: "control" | "sidebar";
   onClick: () => void;
@@ -13,7 +11,9 @@ export const Button: FC<ButtonProps> = ({ type, onClick, title, children }) => {
   return (
     <button
       type="button"
-      className={type === "sidebar" ? sidebarButton : controlButton}
+      className={`button ${
+        type === "sidebar" ? "button__sidebar" : "button__control"
+      }`}
       onClick={onClick}
       title={title}
     >
