@@ -1,10 +1,12 @@
 :root {
+  --birdievid-yellow: #ecc90a;
+  --birdievid-black: #000;
+  --birdievid-white: #fff;
+
   --birdievid-background: #fff;
   --birdievid-dock: rgb(117, 117, 117);
   --birdievid-dock-transparent: rgba(117, 117, 117, 0.5);
   --birdievid-track-unplayed: hsl(0, 0%, 80.5%);
-
-  --birdievid-yellow: #ecc90a;
 }
 
 [data-theme="dark"] {
