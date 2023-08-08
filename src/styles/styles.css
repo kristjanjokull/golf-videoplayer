@@ -2,6 +2,9 @@
   --birdievid-background: #fff;
   --birdievid-dock: rgb(117, 117, 117);
   --birdievid-dock-transparent: rgba(117, 117, 117, 0.5);
+  --birdievid-track-unplayed: hsl(0, 0%, 80.5%);
+
+  --birdievid-yellow: #ecc90a;
 }
 
 [data-theme="dark"] {
@@ -48,6 +51,66 @@
   align-items: center;
   justify-content: center;
 }
+
+/* =============== Rangeslider ===================== */
+.track {
+  position: relative;
+  background: gray;
+  top: 20px;
+  height: 4px;
+}
+
+.track--transition {
+  transition: "width 0.8s ease-out";
+}
+
+.track--active {
+  position: "relative";
+  background: var(--birdievid-track-played);
+  top: 20px;
+  height: 4px;
+}
+
+.horizontalSlider {
+  width: 100%;
+  height: 40px;
+  max-width: 500px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px),
+  screen and (max-width: 480px) {
+  .horizontalSlider {
+    max-width: 400px;
+  }
+}
+
+.thumb {
+  cursor: pointer;
+  position: absolute;
+  z-index: 100;
+  background: var(--birdievid-yellow);
+  border: 5px solid var(--birdievid-yellow);
+  border-radius: 100%;
+  display: block;
+  box-shadow: 0 0 2px 0 rgb(0 0 0 / 44%);
+  top: 12px;
+  width: 10px;
+  height: 10px;
+  outline: none;
+  line-height: 38;
+}
+
+.thumb:focus-within {
+  outline-style: solid;
+  outline-color: blue;
+}
+
+.thumb--transition {
+  transition: "left 0.8s ease-out";
+}
+
+/* =============== Button ===================== */
 
 .button {
   border: none;

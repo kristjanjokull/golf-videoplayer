@@ -6,8 +6,6 @@ import {
   horizontalSlider,
   thumb,
   thumbWithTransition,
-  track,
-  trackWithTransition,
 } from "./rangesliderTemp.css";
 
 type RenderThumb = ReactSliderProps<number>["renderThumb"];
@@ -25,7 +23,7 @@ export const Rangeslider = () => {
 
   const Track: RenderTrack = (props, state) => {
     const indx = state.index;
-    const trackCSS = isPlaying ? trackWithTransition : track;
+    const trackCSS = isPlaying ? "track track--transition" : "track";
     return (
       <div {...props} className={indx === 1 ? trackCSS : activeTrack}></div>
     );
