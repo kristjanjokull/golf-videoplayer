@@ -65,10 +65,7 @@
 }
 
 .track--active {
-  position: "relative";
-  background: var(--birdievid-track-played);
-  top: 20px;
-  height: 4px;
+  background: var(--birdievid-yellow);
 }
 
 .horizontalSlider {

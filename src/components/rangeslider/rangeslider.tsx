@@ -1,7 +1,6 @@
 import ReactSlider, { ReactSliderProps } from "react-slider";
 
 import { useVideoStore } from "../../utils/state";
-import { activeTrack, horizontalSlider } from "./rangesliderTemp.css";
 
 type RenderThumb = ReactSliderProps<number>["renderThumb"];
 type RenderTrack = ReactSliderProps<number>["renderTrack"];
@@ -20,7 +19,10 @@ export const Rangeslider = () => {
     const indx = state.index;
     const trackCSS = isPlaying ? "track track--transition" : "track";
     return (
-      <div {...props} className={indx === 1 ? trackCSS : activeTrack}></div>
+      <div
+        {...props}
+        className={indx === 1 ? trackCSS : "track track--active"}
+      ></div>
     );
   };
 
@@ -45,7 +47,7 @@ export const Rangeslider = () => {
   return (
     <ReactSlider
       disabled={isPlaying}
-      className={horizontalSlider}
+      className="horizontalSlider"
       value={value}
       onChange={handleChange}
       renderTrack={Track}
