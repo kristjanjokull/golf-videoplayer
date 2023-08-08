@@ -1,9 +1,10 @@
+import "../../styles/styles.css";
+
 import { FC, useEffect } from "react";
 
 import { Theme, useThemeStore } from "../../utils/state";
 import { darkTheme, lightTheme } from "../../utils/theme.css";
 import { Analyzer } from "../analyzer/analyzer";
-import { videoContainer } from "./video.css";
 
 type Props = {
   src: Array<string>;
@@ -24,7 +25,7 @@ export const Video: FC<Props> = ({ src, colorTheme = "light" }) => {
 
   return (
     <div className={theme === "light" ? lightTheme : darkTheme}>
-      <div className={videoContainer}>
+      <div>
         {src.length === 1 && <Analyzer src={src[0]} colorTheme={colorTheme} />}
         {src.length === 2 && (
           <>

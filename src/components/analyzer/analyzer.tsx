@@ -6,7 +6,6 @@ import { Sidebar } from "../sidebar/sidebar";
 import { SoundToggler } from "../soundToggler/soundToggler";
 import { ThemeSwitch } from "../themeSwitch/themeSwitch";
 import { VideoFlip } from "../videoFlip/videoFlip";
-import { dock, video, videoContainer, videoFlipped } from "./analyzer.css";
 
 type Props = {
   src: string;
@@ -24,18 +23,18 @@ export const Analyzer = ({ src }: Props) => {
     }));
 
   return (
-    <div className={videoContainer}>
+    <div className="videoContainer">
       <Sidebar
         components={[ThemeSwitch, SoundToggler, VideoFlip, FullScreen]}
       />
-      <div className={dock}>
+      <div className="dock">
         <Controls variant="play" />
         <Rangeslider />
         <Controls variant="time" />
       </div>
       <video
         ref={videoRef}
-        className={!isFlipped ? video : videoFlipped}
+        className={isFlipped ? "video video--flipped" : "video"}
         muted={isMuted}
         onTimeUpdate={() =>
           videoRef.current && setCurrentTime(videoRef.current.currentTime)
