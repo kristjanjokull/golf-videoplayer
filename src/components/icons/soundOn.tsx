@@ -1,5 +1,3 @@
-import { vars } from "../../utils/theme.css";
-
 export const SoundOnIcon = () => {
   return (
     <svg
@@ -9,7 +7,7 @@ export const SoundOnIcon = () => {
       width="40"
     >
       <path
-        fill={vars.colors.sidebarButtons.icon}
+        fill="var(--birdievid-black)"
         d="M320-400v-160h136.923L600-703.078v446.156L456.923-400H320Zm33.846-33.846h118.051l94.257 93.129v-278.412l-94.257 92.975H353.846v92.308Zm106-46.154Z"
       />
     </svg>
