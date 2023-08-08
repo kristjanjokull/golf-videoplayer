@@ -1,12 +1,7 @@
 import ReactSlider, { ReactSliderProps } from "react-slider";
 
 import { useVideoStore } from "../../utils/state";
-import {
-  activeTrack,
-  horizontalSlider,
-  thumb,
-  thumbWithTransition,
-} from "./rangesliderTemp.css";
+import { activeTrack, horizontalSlider } from "./rangesliderTemp.css";
 
 type RenderThumb = ReactSliderProps<number>["renderThumb"];
 type RenderTrack = ReactSliderProps<number>["renderTrack"];
@@ -30,7 +25,7 @@ export const Rangeslider = () => {
   };
 
   const Thumb: RenderThumb = (props, state) => {
-    const thumbCSS = isPlaying ? thumbWithTransition : thumb;
+    const thumbCSS = isPlaying ? "thumb thumb--transition" : "thumb";
     return (
       <div {...props} className={thumbCSS}>
         {state.valueNow}
