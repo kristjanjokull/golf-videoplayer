@@ -12,7 +12,7 @@ type Props = {
 
 export const Video: FC<Props> = ({ src }) => {
   return (
-    <div>
+    <>
       {src.length === 1 && <Analyzer src={src[0]} />}
       {src.length === 2 && (
         <>
@@ -20,6 +20,6 @@ export const Video: FC<Props> = ({ src }) => {
           <Analyzer src={src[1]} />
         </>
       )}
-    </div>
+    </>
   );
 };
